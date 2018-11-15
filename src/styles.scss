@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+app-home {
+    .logo{
+        width: 20rem !important ;
+        height: auto;
+        padding: 5rem;
+    }
+    .centered{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .carousel-item{
+        background-color: gray;
+    }
+}
