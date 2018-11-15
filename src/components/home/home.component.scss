@@ -1,3 +1,11 @@
 app-home {
-
+    .logo{
+        height: 70% ;
+        width: auto;
+    }
+    .centered{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
 }
