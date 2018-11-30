@@ -1,27 +1,44 @@
-# Tp PWA
+TP_Angular_PWA 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+Nous allons mettre en place une progressive web app.
 
-## Development server
+forcer l’utlisation de sass: ng config --global defaults.styleExt=scss
+ng config schematics.@schematics/angular:component.styleext scss
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Installation de l’angular CLI :
+npm install -g @angular/cli
+Création d’un nouveau projet angular :
+ng new tp-pwa
 
-## Running unit tests
+ng add @angular/pwa --project tp-pwa
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+https://angular.io/guide/service-worker-getting-started
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Pour utiliser le service worker :
+Build :
+ng build --prod
+Installer http-server:
+npm install http-server -g
+Lancement :
+http-server -p 8080 -c-1 dist/tp-pwa
 
-## Further help
+Pour dev : ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Pour modifier le comportement du service worker, il suffit de modifier le fichier ngsw-config.json
+
+https://medium.com/@amcdnl/service-worker-pwas-with-the-angular-cli-98a8f16d62d6
+
+//npm i @angular/service-worker --S
+
+Service worker : https://makina-corpus.com/blog/metier/2016/decouvrir-le-service-worker
+
+Il serait possible d’utiliser Ionic pour faire une PWA avec stencil :
+Création/Modification du fichier : npm init stencil
+On lance l’appli avec NodeJs : npm start
+//https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5088826-gerez-la-navigation-avec-le-routing
+
